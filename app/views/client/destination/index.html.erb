@@ -4,11 +4,10 @@
   <% @destinations.each do |destination| %>
     <div class="col-sm-4 mt-3">
       <div class="card">
-        <img src=" <%=  destination["name"]["image"]%>">
+        <img src=" <%=  destination["images"][0]["image_url"]%>" >
         <div class="card-body">
           <h5 class="card-title"> <%= destination["name"] %> </h5>
-
-          <a href="/client/destinations/<%= destination["id"] %>" class="btn btn-primary">ChECK IT OUT</a>
+          <a href="/client/destination/<%= destination["id"] %>" class="btn btn-primary">CHECK IT OUT</a>
         </div>
       </div>
     </div>

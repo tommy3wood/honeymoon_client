@@ -8,13 +8,13 @@ class Client::DestinationController < ApplicationController
 
   def show
     response = HTTP.get("http://localhost:3000/api/destinations/#{params[:id]}")
-    @recipe = response.parse
+    @destination = response.parse
     render 'show.html.erb'
   end
 
   def edit
     response = HTTP.get("http://localhost:3000/api/destinations/#{params[:id]}")
-    @recipe = response.parse
+    @destination = response.parse
     render 'edit.html.erb'
   end
 
